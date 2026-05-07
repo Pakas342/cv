@@ -1,0 +1,182 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Juan Carlos Barrera} \\ \vspace{1pt}
+    \small +61 0426 916 062 $|$
+    \href{mailto:jcbp1999@gmail.com}{\underline{jcbp1999@gmail.com}} $|$
+    \href{https://linkedin.com/in/juan-carlos-barrera-pinilla-16b13419b}{\underline{linkedin/juan-barrera}} $|$
+    \href{https://github.com/Pakas342}{\underline{github/Pakas342}} $|$
+    Sydney, Australia
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+\resumeSubheading
+  {University of Sydney}{Sydney, Australia}
+  {Master of Computer Science (Advanced Entry)}{2026 -- Present}
+\vspace{-8pt}\resumeSubSubheading
+  {Networks \& Distributed Systems / Algorithms \& Theory}{}
+      \resumeItemListStart
+        \resumeItem{Relevant/Favourite coursework: Data Structures \& Algorithms, Systems Programming (C)}
+        \resumeItem{Colfuturo Scholarship recipient, Colombian Government}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Sergio Arboleda University}{Bogot\'a, Colombia}
+      {Bachelor of Finance and International Trade}{2017 -- 2021}
+      \resumeItemListStart
+      \resumeItem{Top 1\% nationally -- Saber Pro 2020 (230/300)}
+        \resumeItem{Colciencias Research Scholarship}
+        \resumeItem{70\% merit scholarship}
+        \resumeItem{GPA 4.40/5.00}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Sprite Animation Library} $|$ \emph{C}}{2026}
+      \resumeItemListStart
+        \resumeItem{Implemented a sprite animation library in C; custom doubly-linked list with O(1) node operations via cached pointers, BMP file parser, and alpha-composited frame renderer --- zero external dependencies}
+        \resumeItem{Designed opaque-struct API enforcing strict memory ownership; all allocation and teardown handled by the library, verified leak-free under AddressSanitizer}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Fullstack Developer}{Dec. 2025 -- Present}
+      {AdviceFlow}{Lisbon, Portugal (Remote)}
+      \resumeItemListStart
+        \resumeItem{Architected backend services coordinating asynchronous data pipelines across multiple third-party APIs under strict latency requirements}
+        \resumeItem{Reduced API response latency through server-side caching strategies and query optimisation on GCP-hosted infrastructure}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Fullstack Developer}{Nov. 2024 -- Feb. 2026}
+      {GeneralDev}{Denver, United States (Remote)}
+      \resumeItemListStart
+        \resumeItem{Built and shipped production web services with focus on server-side performance, data-fetching efficiency, and caching architecture}
+        \resumeItem{Built headless storefront architecture decoupling rendering from commerce APIs; managed data orchestration, caching, and SSR performance across the full request lifecycle}
+        \resumeItem{Maintained CI/CD pipelines via GitHub Actions; wrote deployment automation and environment configuration scripts}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Fullstack Developer}{Jul. 2024 -- Jun. 2025}
+      {AdviceFlow}{Lisbon, Portugal (Remote)}
+
+    \resumeSubheading
+      {Back End Developer}{Mar. 2024 -- Jul. 2024}
+      {Blackpeak}{Vancouver, Canada (Remote)}
+
+    \resumeSubheading
+      {Back End Senior Developer}{Mar. 2022 -- Jan. 2024}
+      {Castia (YC-backed)}{Bogot\'a, Colombia}
+
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, TypeScript, JavaScript, Python, SQL, Bash} \\
+     \textbf{Systems \& Environment}{: Unix/Linux (Arch, openSUSE), POSIX, Neovim, Git, Docker, GitHub Actions} \\
+     \textbf{Web \& Frameworks}{: Node.js, Next.js, Remix.js, React, FastAPI, Flask} \\
+     \textbf{Databases}{: PostgreSQL, CloudSQL, Supabase} \\
+     \textbf{Cloud}{: Google Cloud Platform (GCP), Vercel}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
