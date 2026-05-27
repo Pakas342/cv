@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{3.60004pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Juan Carlos Barrera} \\ \vspace{1pt}
+    \small +61 0426 916 062 $|$
+    \href{mailto:jcbp1999@gmail.com}{\underline{jcbp1999@gmail.com}} $|$
+    \href{https://linkedin.com/in/juan-carlos-barrera-pinilla-16b13419b}{\underline{linkedin/juan-barrera}} $|$
+    \href{https://github.com/Pakas342}{\underline{github/Pakas342}} $|$
+    Sydney, Australia
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Full-stack engineer with 4 years of production experience delivering end-to-end web applications across fintech and e-commerce domains. Specialises in Node.js/NextJS/Remix.js back-ends, Next.js/React front-ends, and PostgreSQL data layers, with hands-on work in OAuth 2.0 flows, API security (CORS, encryption, key management), and Swagger/OpenAPI documentation. Comfortable owning the full lifecycle from architecture through CI/CD deployment on GCP.}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Fullstack Developer}{Jul. 2024 -- Jun. 2025 $\cdot$ Dec. 2025 -- Present}
+      {AdviceFlow}{Lisbon, Portugal (Remote)}
+      \resumeItemListStart
+        \resumeItem{Built and maintained RESTful APIs with NextJS integrating multiple third-party services}
+        \resumeItem{Implemented OAuth 2.0, CORS policies, and payload encryption for financial data handling}
+        \resumeItem{Modelled relational schemas with TypeORM on GCP-hosted PostgreSQL; applied query optimisation and caching to improve response times}
+      \vspace{5pt}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Fullstack Developer}{Nov. 2024 -- Feb. 2026}
+      {GeneralDev}{Denver, United States (Remote)}
+      \resumeItemListStart
+        \resumeItem{Built full-stack features connecting a Next.js/React front-end to Shopify APIs and custom Node.js back-end endpoints}
+        \resumeItem{Developed AI features in Next.js including a RAG pipeline and chat interface backed by LLM APIs}
+        \resumeItem{Built Python services with FastAPI and Flask to expose internal data-processing workflows as REST endpoints}
+        \resumeItem{Configured CORS, API key management, and request encryption across service boundaries}
+        \resumeItem{Managed CI/CD pipelines with GitHub Actions across staging and production environments}
+      \vspace{5pt}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Back End Developer}{Mar. 2024 -- Jul. 2024}
+      {Blackpeak}{Vancouver, Canada (Remote)}
+      \resumeItemListStart
+        \resumeItem{Built a headless storefront connecting a Webflow front-end to Shopify APIs through a Xano backend}
+        \resumeItem{Built REST API endpoints with Node.js; integrated third-party OAuth providers and handled token lifecycle in a PostgreSQL session store}
+      \vspace{5pt}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Back End Senior Developer}{Mar. 2022 -- Jan. 2024}
+      {Castia (YC-backed)}{Bogot\'a, Colombia}
+      \resumeItemListStart
+        \resumeItem{Designed and owned the full API layer in Xano for a mobile app: endpoint structure, authentication with OAuth 2.0 and JWT, and encryption at rest and in transit}
+        \resumeItem{Modelled the database schema and implemented all business logic in Xano, serving a no-code mobile frontend}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+\resumeSubheading
+  {University of Sydney}{Sydney, Australia}
+  {Master of Computer Science (Advanced Entry)}{2026 -- Present}
+\vspace{-2pt}\resumeSubSubheading
+  {Networks \& Distributed Systems / Algorithms \& Theory}{}
+      \resumeItemListStart
+        \resumeItem{Colfuturo Scholarship recipient, Colombian Government}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Sergio Arboleda University}{Bogot\'a, Colombia}
+      {Bachelor of Finance and International Trade}{2017 -- 2021}
+      \resumeItemListStart
+        \resumeItem{Top 1\% nationally -- Saber Pro 2020 (230/300) $|$ Colciencias Research Scholarship $|$ GPA 4.40/5.00}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, JavaScript, SQL, Python, C, Bash} \\
+     \textbf{Front-End}{: Next.js, React, Tailwind CSS, HTML, CSS, RxJS} \\
+     \textbf{Back-End}{: Node.js, NextJS, Remix.js, FastAPI, Flask, Xano} \\
+     \textbf{Databases}{: PostgreSQL, TypeORM, CloudSQL, Supabase} \\
+     \textbf{Security}{: OAuth 2.0, CORS, Encryption \& Decryption, Key Management} \\
+\textbf{Cloud \& DevOps}{: GCP, Docker, GitHub Actions, Vercel} \\
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
