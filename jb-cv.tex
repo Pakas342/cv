@@ -4,7 +4,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -24,6 +24,7 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{3.60004pt}
 
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
@@ -92,6 +93,10 @@
     Sydney, Australia
 \end{center}
 
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Software engineer with 4 years of production web-fullstack experience, now focused on systems and distributed-systems engineering. Currently completing a Master of Computer Science majoring in Networks \& Distributed Systems and Algorithms \& Theory; hands-on C work spans multi-process IPC servers, \texttt{epoll}-driven event loops, configurable thread-pool scheduling, and POSIX synchronisation.}
+
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
@@ -99,10 +104,10 @@
 \resumeSubheading
   {University of Sydney}{Sydney, Australia}
   {Master of Computer Science (Advanced Entry)}{2026 -- Present}
-\vspace{-8pt}\resumeSubSubheading
+\vspace{-2pt}\resumeSubSubheading
   {Networks \& Distributed Systems / Algorithms \& Theory}{}
       \resumeItemListStart
-        \resumeItem{Relevant/Favourite coursework: Data Structures \& Algorithms, Systems Programming (C)}
+        \resumeItem{Relevant coursework: Data Structures \& Algorithms, Systems Programming (C)}
         \resumeItem{Colfuturo Scholarship recipient, Colombian Government}
       \resumeItemListEnd
 
@@ -123,6 +128,14 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
+      {\textbf{Concurrent Animation Server} $|$ \emph{C, POSIX}}{2026}
+      \resumeItemListStart
+        \resumeItem{Parallelises RPC execution from a worker-thread pool via round-robin; an enqueuer process enforces per-client order through queues, and concurrent execution on a three-process pipeline (connection handler $\to$ enqueuer $\to$ processor) driven by \texttt{epoll} on IPC fds}
+        \resumeItem{Wired five IPC mechanisms --- named pipes, anonymous pipes, SIGUSR1/2 handshake, \texttt{timerfd} idle timeouts, and \texttt{epoll} event queues --- with non-blocking I/O}
+        \resumeItem{Built cross-client barrier synchronisation on shared resources; resolved disconnecting deadlocks; AddressSanitizer clean throughout}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
       {\textbf{Sprite Animation Library} $|$ \emph{C}}{2026}
       \resumeItemListStart
         \resumeItem{Implemented a sprite animation library in C; custom doubly-linked list with O(1) node operations via cached pointers, BMP file parser, and alpha-composited frame renderer --- zero external dependencies}
@@ -136,7 +149,7 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Fullstack Developer}{Dec. 2025 -- Present}
+      {Fullstack Developer}{Jul. 2024 -- Jun. 2025 $\cdot$ Dec. 2025 -- Present}
       {AdviceFlow}{Lisbon, Portugal (Remote)}
       \resumeItemListStart
         \resumeItem{Architected backend services coordinating asynchronous data pipelines across multiple third-party APIs under strict latency requirements}
@@ -153,12 +166,9 @@
       \resumeItemListEnd
 
     \resumeSubheading
-      {Fullstack Developer}{Jul. 2024 -- Jun. 2025}
-      {AdviceFlow}{Lisbon, Portugal (Remote)}
-
-    \resumeSubheading
       {Back End Developer}{Mar. 2024 -- Jul. 2024}
       {Blackpeak}{Vancouver, Canada (Remote)}
+      \vspace{1pt}
 
     \resumeSubheading
       {Back End Senior Developer}{Mar. 2022 -- Jan. 2024}
